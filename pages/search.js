@@ -15,6 +15,15 @@ export default function SearchPage({ hotelData }) {
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
+  const firstDate = new Date(startDate).getTime();
+  const lastDate = new Date(endDate).getTime();
+  const differDate = lastDate - firstDate;
+  const totalDate = differDate / (1000 * 3600 * 24);
+
+  console.log(totalDate);
+
+
+
   return (
     <Fragment>
       <Header placeholder={` ${location} | ${range} | ${guest} guest`} />
@@ -34,7 +43,7 @@ export default function SearchPage({ hotelData }) {
           price={item.price}
           star={item.star}
           title={item.title}
-          total={item.total}
+          totalDate={totalDate}
           description={item.description}
         />
       ))}

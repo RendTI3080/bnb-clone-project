@@ -11,7 +11,7 @@ export default function Banner() {
       />
       <div className="absolute top-1/2 w-full text-center">
         <p className="text-sm sm:text-lg lg:text-2xl font-semibold mb-3">Traveling to world</p>
-        <button className="text-purple-500 shadow-md font-bold py-4 px-10 bg-white rounded-full hover:shadow-xl active:scale-90 transition duration-150">Let's Go</button>
+        <button className="text-purple-500 shadow-md font-bold py-2 px-5 sm:py-4 sm:px-10 bg-white rounded-full hover:shadow-xl active:scale-90 transition duration-150">Let's Go</button>
       </div>
     </div>
   );

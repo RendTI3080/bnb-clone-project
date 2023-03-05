@@ -26,11 +26,13 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch("https://bnb-clone-2f535-default-rtdb.asia-southeast1.firebasedatabase.app/explore.json").then(
+  // database for exploreData
+  const exploreData = await fetch().then(
     (res) => res.json()
   );
 
-  const liveData = await fetch("https://bnb-clone-2f535-default-rtdb.asia-southeast1.firebasedatabase.app/live.json").then(
+  // database for liveData
+  const liveData = await fetch().then(
     (res) => res.json()
   );
 

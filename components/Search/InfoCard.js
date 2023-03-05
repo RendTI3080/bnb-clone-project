@@ -11,7 +11,7 @@ export default function InfoCard({
   location,
   price,
   star,
-  total,
+  totalDate,
 }) {
   const [heartColor, setHeartColor] = useState(false);
 
@@ -22,6 +22,9 @@ export default function InfoCard({
       setHeartColor(false);
     }
   }
+
+  const total = +price * totalDate;
+
 
   return (
     <div className="flex py-7 px-2 mx-5 border-b cursor-pointer hover:opacity-80 hover:shadow-lg first:border-t">
@@ -43,7 +46,7 @@ export default function InfoCard({
           )}
         </div>
 
-        <h4 className="text-xl pt-2">{title}</h4>
+        <h4 className="text-lg font-semibold sm:text-xl pt-2">{title}</h4>
 
         <div className="border-b w-10 pt-2" />
 
@@ -56,8 +59,8 @@ export default function InfoCard({
           </p>
 
           <div>
-            <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
-            <p className="text-right font-extralight">{total}</p>
+            <p className="text-sm lg:text-2xl font-semibold pb-2 pt-2">&#8364;{`${price}/night`}</p>
+            <p className="text-right font-extralight">Total &#8364;{total}</p>
           </div>
         </div>
       </div>
